@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibeware - We bring technology to life</title>
-    <meta name="description" content="We build intelligent AI agents that transform how businesses operate. From our flagship Vibeware Home mobile app, to custom enterprise solutions.">
+    <title>Vibeware - Custom AI Solutions</title>
+    <meta name="description" content="We build intelligent AI agents that transform how businesses operate. From our flagship Vibeware Home to custom enterprise solutions.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,15 +13,25 @@
     
     <style>
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #06b6d4;
-            --accent: #f59e0b;
-            --dark: #0f172a;
-            --gray: #64748b;
-            --light-gray: #f1f5f9;
+            /* Brand Colors */
+            --teal: #2DD4BF;
+            --teal-dark: #22a89f;
+            --coral: #FF6B6B;
+            --coral-dark: #ff5252;
+            --charcoal: #374151;
+            --charcoal-light: #4b5563;
+            
+            /* UI Colors */
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
             --white: #ffffff;
-            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #2DD4BF 0%, #FF6B6B 100%);
+            --gradient-teal: linear-gradient(135deg, #2DD4BF 0%, #22a89f 100%);
+            --gradient-coral: linear-gradient(135deg, #FF6B6B 0%, #ff5252 100%);
+            --gradient-dark: linear-gradient(135deg, #374151 0%, #1f2937 100%);
         }
 
         * {
@@ -59,12 +69,14 @@
         }
 
         .logo {
-            font-size: 1.75rem;
-            font-weight: 800;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 100%;
+            width: auto;
         }
 
         .nav-links {
@@ -81,11 +93,11 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--teal);
         }
 
         .cta-button {
-            background: var(--primary);
+            background: var(--teal);
             color: white;
             padding: 0.75rem 1.75rem;
             border-radius: 8px;
@@ -95,9 +107,9 @@
         }
 
         .cta-button:hover {
-            background: var(--primary-dark);
+            background: var(--teal-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 20px rgba(45, 212, 191, 0.3);
         }
 
         /* Mobile menu */
@@ -111,7 +123,7 @@
         .mobile-menu span {
             width: 25px;
             height: 3px;
-            background: var(--dark);
+            background: var(--charcoal);
             transition: all 0.3s;
         }
 
@@ -132,7 +144,7 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--teal) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -153,9 +165,9 @@
 
         .secondary-button {
             background: transparent;
-            color: var(--primary);
+            color: var(--teal);
             padding: 0.75rem 1.75rem;
-            border: 2px solid var(--primary);
+            border: 2px solid var(--teal);
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
@@ -163,7 +175,7 @@
         }
 
         .secondary-button:hover {
-            background: var(--primary);
+            background: var(--teal);
             color: white;
         }
 
@@ -187,7 +199,7 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            background: radial-gradient(circle, var(--teal) 0%, transparent 70%);
             opacity: 0.05;
         }
 
@@ -201,7 +213,7 @@
         .agent-icon {
             width: 60px;
             height: 60px;
-            background: var(--gradient);
+            background: var(--gradient-primary);
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -285,7 +297,7 @@
         .feature-icon {
             width: 70px;
             height: 70px;
-            background: var(--gradient);
+            background: var(--gradient-teal);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -328,7 +340,7 @@
         }
 
         .badge {
-            background: var(--accent);
+            background: var(--coral);
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 20px;
@@ -344,7 +356,7 @@
         }
 
         .badge.download-badge:hover {
-            background: var(--primary);
+            background: var(--coral-dark);
             transform: scale(1.05);
             color: white;
         }
@@ -372,7 +384,7 @@
             content: "✓";
             width: 24px;
             height: 24px;
-            background: var(--secondary);
+            background: var(--teal);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -386,7 +398,7 @@
         }
 
         .phone-mockup {
-            background: var(--dark);
+            background: var(--charcoal);
             border-radius: 30px;
             padding: 10px;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
@@ -412,7 +424,7 @@
         }
 
         .demo-chat.ai {
-            background: var(--primary);
+            background: var(--teal);
             color: white;
             align-self: flex-end;
         }
@@ -420,7 +432,7 @@
         /* Services Section */
         .services {
             padding: 80px 5%;
-            background: var(--dark);
+            background: var(--charcoal);
             color: white;
         }
 
@@ -449,6 +461,7 @@
         .service-card:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-5px);
+            border-color: var(--teal);
         }
 
         .service-card h3 {
@@ -463,7 +476,7 @@
         }
 
         .service-card a {
-            color: var(--secondary);
+            color: var(--teal);
             text-decoration: none;
             font-weight: 600;
             display: inline-flex;
@@ -479,7 +492,7 @@
         /* CTA Section */
         .cta-section {
             padding: 100px 5%;
-            background: var(--gradient);
+            background: var(--gradient-primary);
             text-align: center;
             color: white;
         }
@@ -500,7 +513,7 @@
 
         .cta-button-white {
             background: white;
-            color: var(--primary);
+            color: var(--teal);
             padding: 1rem 2.5rem;
             border-radius: 8px;
             text-decoration: none;
@@ -513,6 +526,7 @@
         .cta-button-white:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            color: var(--teal-dark);
         }
 
         /* Footer */
@@ -534,10 +548,20 @@
         .footer-brand h3 {
             font-size: 1.75rem;
             margin-bottom: 1rem;
-            background: var(--gradient);
+            background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+        
+        .footer-brand .footer-logo {
+            height: 70px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand .footer-logo img {
+            height: 100%;
+            width: auto;
         }
 
         .footer-brand p {
@@ -564,7 +588,7 @@
         }
 
         .footer-column ul li a:hover {
-            color: white;
+            color: var(--teal);
         }
 
         .footer-bottom {
@@ -572,6 +596,15 @@
             padding-top: 2rem;
             text-align: center;
             color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Feature card accent colors */
+        .feature-card:nth-child(2) .feature-icon {
+            background: var(--gradient-coral);
+        }
+
+        .feature-card:nth-child(3) .feature-icon {
+            background: var(--gradient-dark);
         }
 
         /* Responsive */
@@ -640,7 +673,9 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Vibeware AI</div>
+            <div class="logo">
+                <img src="logotext.png" alt="Vibeware" />
+            </div>
             <div class="nav-links">
                 <a href="#products">Products</a>
                 <a href="#services">Services</a>
@@ -658,7 +693,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>AI Agents That Transform Your Business</h1>
+            <h1>AI Solutions Made Simple</h1>
             <p>We build intelligent AI agents that understand context, learn from interactions, and deliver real results. From smart homes to enterprise solutions.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="cta-button">Build Your AI Agent</a>
@@ -687,8 +722,8 @@
     <section class="features">
         <div class="features-container">
             <div class="section-header fade-in">
-                <h2>Why Choose Vibeware AI?</h2>
-                <p>We don't just build chatbots. We create intelligent agents that understand your business.</p>
+                <h2>Why Choose Vibeware?</h2>
+                <p>We don't just build chatbots. We create intelligent agents that understand your world.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card fade-in">
@@ -714,7 +749,7 @@
     <section id="products" class="products">
         <div class="section-header fade-in">
             <h2>Our Products</h2>
-            <p>Pre-built AI agents ready to transform specific industries</p>
+            <p>Pre-built AI agents and applications.</p>
         </div>
         <div class="product-showcase fade-in">
             <div class="product-info">
@@ -742,7 +777,7 @@
                             Create a movie night scene
                         </div>
                         <div class="demo-chat ai">
-                            "Done! For movie night, I'll dim the lights, ensure the TV is on, and start the popcorn 🍿"
+                            Done! For movie night, I'll dim the lights, ensure the TV is on, and start the popcorn 🍿
                         </div>
                     </div>
                 </div>
@@ -795,7 +830,7 @@
         <div class="cta-content fade-in">
             <h2>Ready to Build Your AI Agent?</h2>
             <p>Let's discuss how intelligent agents can transform your business. Free consultation for qualified projects.</p>
-            <a href="mailto:hello@vibeware.ai" class="cta-button-white">Schedule Consultation</a>
+            <a href="mailto:hello@vibewareai.com" class="cta-button-white">Schedule Consultation</a>
         </div>
     </section>
 
@@ -803,7 +838,9 @@
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <h3>Vibeware AI</h3>
+                <div class="footer-logo">
+                    <img src="logotext.png" alt="Vibeware" />
+                </div>
                 <p>Building intelligent AI agents that understand context, learn continuously, and deliver real business value.</p>
             </div>
             <div class="footer-column">
@@ -833,7 +870,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Vibeware AI. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2024 Vibeware, Inc. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
     </footer>
 
@@ -912,7 +949,7 @@
             // Desktop - show both options or a landing page
             else {
                 downloadBadge.href = '/download'; // Landing page with both options
-                downloadBadge.innerHTML = 'Go to App';
+                downloadBadge.innerHTML = 'Download App';
             }
         }
     </script>
